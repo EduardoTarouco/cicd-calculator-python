@@ -1,4 +1,4 @@
-name: CI - Calculator App
+name: CI/CD - Calculator App
 
 on:
   push:
@@ -29,7 +29,7 @@ jobs:
 
       - name: Verificar vulnerabilidades
         run: |
-            bandit -r app.py -ll
+            bandit -r . -ll
 
   deploy:
     runs-on: ubuntu-latest
